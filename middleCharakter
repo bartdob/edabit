@@ -1,0 +1,33 @@
+Create a function that takes a string and returns the middle character(s). If the word's length is odd, return the middle character. If the word's length is even, return the middle two characters.
+
+Examples
+get_middle("test") ➞ "es"
+
+get_middle("testing") ➞ "t"
+
+get_middle("middle") ➞ "dd"
+
+get_middle("A") ➞ "A"
+
+
+Solution
+------------------------------------------
+
+def get_middle(word):
+    middle = ""
+    middle = len(word)/2
+    middleL = 0
+
+    if len(word)%2 == 0:
+        for i, w in enumerate(word):
+            middleL = word[middle -1] + word[middle]
+        print(middleL)
+    else:
+        middleL = word[middle]
+        print(middleL)
+
+
+get_middle("kayak")
+get_middle("12345")
+get_middle("fdskjfskfhds")
+get_middle("kayakyyy")
